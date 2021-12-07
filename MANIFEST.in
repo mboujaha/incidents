@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include incidents *.css
+recursive-include incidents *.csv
+recursive-include incidents *.html
+recursive-include incidents *.ico
+recursive-include incidents *.js
+recursive-include incidents *.json
+recursive-include incidents *.md
+recursive-include incidents *.png
+recursive-include incidents *.py
+recursive-include incidents *.svg
+recursive-include incidents *.txt
+recursive-exclude incidents *.pyc
