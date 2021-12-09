@@ -3,7 +3,7 @@ from frappe import _
 def get_data():
 	return [
 		{
-			"module_name": "Géstion des incidents",
+			"module_name": "Incidents",
 			"color": "blue",
 			"icon": "octicon octicon-file-directory",
 			"type": "module",
