@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:incident_cat",
+ "creation": "2021-09-24 14:50:05.912579",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "incident_cat",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_incident_categories",
+  "how_can",
+  "for_all"
+ ],
+ "fields": [
+  {
+   "fieldname": "incident_cat",
+   "fieldtype": "Data",
+   "label": "Cat\u00e9gorie",
+   "unique": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Incident categories"
+  },
+  {
+   "fieldname": "parent_incident_categories",
+   "fieldtype": "Link",
+   "label": "Parent Incident categories",
+   "options": "Incident categories"
+  },
+  {
+   "fieldname": "how_can",
+   "fieldtype": "Small Text",
+   "label": "how can report"
+  },
+  {
+   "default": "0",
+   "fieldname": "for_all",
+   "fieldtype": "Check",
+   "label": "show_to_all"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2021-12-01 11:04:50.692261",
+ "modified_by": "Administrator",
+ "module": "Incidents",
+ "name": "Incident categories",
+ "naming_rule": "By fieldname",
+ "nsm_parent_field": "parent_incident_categories",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "read_only": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

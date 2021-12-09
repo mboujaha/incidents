@@ -1,0 +1,205 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{######} - {title}",
+ "creation": "2021-09-24 23:11:47.883374",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "incident_cat",
+  "incident_sub_cat",
+  "incident_date",
+  "qualification",
+  "description",
+  "has_actions",
+  "taken_actions",
+  "impact",
+  "action_plan",
+  "attach_image",
+  "img",
+  "media",
+  "circuit_email",
+  "amended_from",
+  "site"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Titre",
+   "read_only_depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incident_cat",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Cat\u00e9gorie d'incident",
+   "options": "Incident categories",
+   "read_only_depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.incident_cat!==undefined",
+   "fieldname": "incident_sub_cat",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sous cat\u00e9gorie",
+   "options": "Incident categories",
+   "read_only_depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'",
+   "reqd": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "incident_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date d'incident",
+   "read_only_depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Qualification",
+   "options": "Qualification",
+   "read_only_depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "read_only_depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_actions",
+   "fieldtype": "Check",
+   "label": "Actions entam\u00e9es ?",
+   "read_only_depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'"
+  },
+  {
+   "depends_on": "has_actions",
+   "fieldname": "taken_actions",
+   "fieldtype": "Table",
+   "label": "Actions entam\u00e9es",
+   "options": "Action Plan",
+   "read_only_depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'"
+  },
+  {
+   "fieldname": "impact",
+   "fieldtype": "Table",
+   "label": "Impact",
+   "options": "Incident Impact Row",
+   "read_only_depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'"
+  },
+  {
+   "depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'",
+   "fieldname": "action_plan",
+   "fieldtype": "Table",
+   "label": "Plan d'action",
+   "options": "Action Plan"
+  },
+  {
+   "fieldname": "img",
+   "fieldtype": "Image",
+   "label": "Image",
+   "max_height": "120px",
+   "options": "attach_image",
+   "width": "10px"
+  },
+  {
+   "fieldname": "media",
+   "fieldtype": "Button",
+   "label": "Prise photo / vid\u00e9o"
+  },
+  {
+   "fieldname": "circuit_email",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Circuit",
+   "options": "Email",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Incident",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Data",
+   "label": "SITE"
+  },
+  {
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Attach image"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-12-03 12:39:44.780609",
+ "modified_by": "Administrator",
+ "module": "Incidents",
+ "name": "Incident",
+ "name_case": "UPPER CASE",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Incident User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Incident viewer",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Incident manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC"
+}

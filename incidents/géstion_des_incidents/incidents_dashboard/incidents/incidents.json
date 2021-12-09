@@ -1,0 +1,41 @@
+{
+ "cards": [
+  {
+   "card": "D\u00e9clar\u00e9 et Qualifi\u00e9"
+  },
+  {
+   "card": "En cours de traitement"
+  },
+  {
+   "card": "Cl\u00f4tur\u00e9"
+  },
+  {
+   "card": "D\u00e9clar\u00e9s et qualifi\u00e9s 7jours"
+  },
+  {
+   "card": "En cours de traitement  3mois"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Qualification",
+   "width": "Half"
+  },
+  {
+   "chart": "Cat\u00e9gorie",
+   "width": "Half"
+  }
+ ],
+ "creation": "2021-09-26 11:18:24.713904",
+ "dashboard_name": "Incidents",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2021-11-18 13:44:55.231213",
+ "modified_by": "Administrator",
+ "module": "Incidents",
+ "name": "Incidents",
+ "owner": "Administrator"
+}

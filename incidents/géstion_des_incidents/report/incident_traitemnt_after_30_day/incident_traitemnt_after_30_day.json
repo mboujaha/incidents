@@ -1,0 +1,44 @@
+{
+ "add_total_row": 0,
+ "columns": [
+  {
+   "fieldname": "count",
+   "fieldtype": "Int",
+   "label": "count",
+   "width": 0
+  }
+ ],
+ "creation": "2021-11-18 13:25:33.112956",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "NEXW",
+ "modified": "2021-11-18 13:38:44.119580",
+ "modified_by": "Administrator",
+ "module": "Incidents",
+ "name": "Incident traitemnt after 30 day",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "select count(*) as count from tabIncident \nwhere \nworkflow_state = 'En cours de traitement'\nand DATE_ADD(incident_date, INTERVAL 90 DAY) < now()",
+ "ref_doctype": "Incident",
+ "report_name": "Incident traitemnt after 30 day",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Incident manager"
+  },
+  {
+   "role": "Incident viewer"
+  },
+  {
+   "role": "Incident User"
+  },
+  {
+   "role": "Incident Moderator"
+  }
+ ]
+}
