@@ -14,7 +14,8 @@
   "is_group",
   "old_parent",
   "parent_incident_impact",
-  "amended_from"
+  "amended_from",
+  "poid"
  ],
  "fields": [
   {
@@ -73,12 +74,17 @@
    "options": "Incident Impact",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "poid",
+   "fieldtype": "Data",
+   "label": "Poid"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2021-10-11 11:38:44.477215",
+ "modified": "2022-01-19 13:55:48.056839",
  "modified_by": "Administrator",
  "module": "Incidents",
  "name": "Incident Impact",

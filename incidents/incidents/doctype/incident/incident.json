@@ -10,6 +10,11 @@
   "title",
   "incident_cat",
   "incident_sub_cat",
+  "column_break_4",
+  "attach_image",
+  "img",
+  "media",
+  "section_break_8",
   "incident_date",
   "qualification",
   "description",
@@ -17,9 +22,6 @@
   "taken_actions",
   "impact",
   "action_plan",
-  "attach_image",
-  "img",
-  "media",
   "circuit_email",
   "amended_from",
   "site"
@@ -29,7 +31,7 @@
    "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Titre",
+   "label": "Intitul\u00e9",
    "read_only_depends_on": "eval: doc.workflow_state != 'D\u00e9clar\u00e9 et Qualifi\u00e9'",
    "reqd": 1
   },
@@ -143,15 +145,24 @@
    "label": "SITE"
   },
   {
+   "default": "/files/370090_camera_photo_photos_picture_image_icon (1).svg",
    "fieldname": "attach_image",
    "fieldtype": "Attach Image",
    "hidden": 1,
    "label": "Attach image"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-12-09 16:45:50.916316",
+ "modified": "2022-01-27 10:30:30.521008",
  "modified_by": "Administrator",
  "module": "Incidents",
  "name": "Incident",
@@ -194,6 +205,20 @@
    "read": 1,
    "report": 1,
    "role": "Incident manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
    "select": 1,
    "share": 1,
    "submit": 1,
